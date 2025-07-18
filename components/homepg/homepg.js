@@ -1,4 +1,4 @@
-
+import Footer from '../main/footer'
 import Navbar from './navbar'
 import HostelCard from '@/components/homepg/card'
 
@@ -113,6 +113,7 @@ export default function Home() {
         />
       ))}
     </div>
+    <Footer></Footer>
 
     </div>
   )

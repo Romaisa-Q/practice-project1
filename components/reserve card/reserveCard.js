@@ -10,7 +10,7 @@ import {
   setCheckOut,
 } from '@/store/slices/filterSlice';
 
-const BookingCard = () => {
+const BookingCard = ({ className }) => {
   const dispatch = useDispatch();
  const location = useSelector(state => state.filter.location);
 const gender = useSelector(state => state.filter.gender);
@@ -60,7 +60,8 @@ const seater = useSelector(state => state.filter.seater);
   };
 
   return (
-    <div className="max-w-md mx-auto bg-white rounded-lg shadow-lg p-6 font-sans">
+      <div className={`max-w-md mx-auto bg-white rounded-lg shadow-lg p-6 font-sans ${className}`}>
+
       {/* Price Header */}
       <div className="text-center mb-6">
         <h2 className="text-3xl font-bold text-gray-800">${calculatePrice()}</h2>

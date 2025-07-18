@@ -9,12 +9,14 @@ import { Heart, Award, Star } from 'lucide-react'
 import { Snowflake, Key, Calendar } from 'lucide-react';
 import HostProfile from '@/components/landingpg/hostprofile';
 import ReserveCard from '@/components/reserve card/reserveCard';
+import StazeyFooter from '@/components/main/footer';
 
 const HostelDetail = () => {
   const router = useRouter()
   const { id } = router.query
 
   return (
+    <>
     <div className='max-w-6xl mx-auto'>
     <Navbar className="sticky"/>
     <div className=" max-w-6xl mx-auto p-6">
@@ -169,7 +171,7 @@ const HostelDetail = () => {
     </div>
 
      <div>
-      <ReserveCard/>
+      <ReserveCard className=" sticky top-0 z-11"/>
     </div>
     </div>
     <RatingSection/>
@@ -178,6 +180,8 @@ const HostelDetail = () => {
     <HostProfile/>
     <div/>
     </div>
+    <StazeyFooter/>
+    </>
   )
 }
 
